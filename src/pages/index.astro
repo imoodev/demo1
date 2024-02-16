@@ -1,0 +1,15 @@
+---
+import Layout from "../layouts/Layout.astro";
+import css from "../css/style.module.scss";
+
+const { isRed } = Astro.props;
+---
+
+<!-- If `isRed` is truthy, class will be "box red". --><!-- If `isRed` is falsy, class will be "box". -->
+<div >
+  <Layout title="Items">
+    <p class:list={[css.red]}>Here, we would show information about the item with id !</p>
+  </Layout>
+</div>
+
+

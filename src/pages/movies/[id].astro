@@ -1,0 +1,30 @@
+---
+export const prerender = true;
+
+export const getStaticPaths = () => {
+  return [
+    { params: { id: '70' } },
+    { params: { id: '836' } },
+    { params: { id: '4030' } },
+    { params: { id: '5830' } },
+  ];
+}
+
+import Layout from "../../layouts/Layout.astro";
+
+const id = Astro.params.id;
+---
+
+<Layout title="Items">
+  <p>Here, we would show information about the item with id { id }!</p>
+</Layout>
+
+<style>
+  p {
+    color: red;
+  }
+
+  .text {
+    color: blue;
+  }
+</style>
